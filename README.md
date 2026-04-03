@@ -28,7 +28,6 @@ popular.
   - JavaScript (ES6)
 ### API
   - Jikan API (4.0.0)
-  - API Link: https://docs.api.jikan.moe
 
 ---
 
