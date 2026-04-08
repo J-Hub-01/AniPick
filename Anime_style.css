@@ -1,0 +1,37 @@
+#Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.outerCard{
+    margin: 5%;
+    text-align: center;
+}
+.cards{
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+}
+
+.hoverCard{
+    background-color: goldenrod;
+    border-radius: 10%;
+    text-align: center;
+}
+
+
+.outerCard:hover{
+    background-color: goldenrod;
+    border-radius: 10%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#Main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    row-gap: 25px;
+}
