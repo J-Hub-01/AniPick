@@ -5,10 +5,10 @@ display.then((response)=>{
 })
 .then((obj)=>{
     let list = obj.data
-    list.forEach((element,index)=>{
-        let j = Math.floor(Math.random() * (index + 1));
-        [element, list[j]] = [list[j], element];
-    })
+    for (let i = list.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [list[i], list[j]] = [list[j], list[i]];
+    }
     let selection=list.slice(0,12)
 
     selection.forEach((x)=>{
@@ -17,7 +17,8 @@ display.then((response)=>{
         outerCard.classList.add("outerCard")
 
         let topImg=document.createElement("img")
-        topImg.src=x.images.jpg.small_image_url
+        topImg.src=x.images.jpg.large_image_url
+        topImg.classList.add("topImg")
 
         let tag=document.createElement("img")
         tag.src=x.images.jpg.large_image_url
@@ -33,9 +34,12 @@ display.then((response)=>{
         synopsis.innerHTML=`<b>Synopsis:</b> ${x.synopsis}`
         
         let blockOfContent=document.createElement("div")
-        blockOfContent.append(titleForCard,score,synopsis)
+        blockOfContent.append(topImg,titleForCard,score,synopsis)
+        blockOfContent.classList.add("content")
+        console.log(blockOfContent)
 
-        outerCard.append(tag,name)
+
+        outerCard.append(tag,name,blockOfContent)
         Main.append(outerCard)
 
 
