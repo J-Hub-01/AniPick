@@ -26,10 +26,10 @@ display.then((response)=>{
 
         let name=document.createElement("h2")
         name.textContent=x.titles[0].title
-        let titleForCard=document.createElement("h4")
+        let titleForCard=document.createElement("h3")
         titleForCard.innerHTML=`<b>Title:</b> ${x.title_english}`
         let score=document.createElement("p")
-        score.textContent=`Ratings: ${x.score}`
+        score.innerHTML=`<b>Ratings:</b> ${x.score}`
         let synopsis=document.createElement("p")
         synopsis.innerHTML=`<b>Synopsis:</b> ${x.synopsis}`
         
